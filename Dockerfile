@@ -1,5 +1,5 @@
-FROM mckaygerhard/apache-php:latest
-MAINTAINER mckaygerhard
+FROM jeanorta/apache-php:latest
+MAINTAINER jeanorta
 
 # Install packages
 RUN apt-get update && \

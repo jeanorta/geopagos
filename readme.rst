@@ -1,3 +1,9 @@
+**********************
+Ejercicio de framework
+**********************
+
+Ejercicio de un CRUD en codeigniter con tareas básicas de tablas para la empresa GeoPagos.
+
 ###################
 What is CodeIgniter
 ###################

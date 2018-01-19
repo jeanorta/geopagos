@@ -20,7 +20,7 @@ services:
         environment:
             - PHP_TIMEZONE=UTC
             - MYSQL_USERNAME=geopagos
-            - MYSQL_PASSWORD=malditoguindo
+            - MYSQL_PASSWORD=guindo
             - MYSQL_DB_NAME=geopagos
             - MYSQL_HOST_NAME=localhost
 
@@ -30,7 +30,7 @@ services:
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_DATABASE=geopagos
             - MYSQL_USER=geopagos
-            - MYSQL_PASSWORD=malditoguindo
+            - MYSQL_PASSWORD=guindo
         ports:
             - "3306:3306"
         volumes_from:
