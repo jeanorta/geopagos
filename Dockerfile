@@ -7,7 +7,7 @@ RUN apt-get update && \
  DEBIAN_FRONTEND=noninteractive apt-get -y install supervisor pwgen && \
  apt-get -y install mysql-client unzip
 
-RUN chown -R www-data:www-data /app
+RUN chown -R www-data:www-data /application
 
 #to manange externally the container mysql in the real debian
 EXPOSE 80
