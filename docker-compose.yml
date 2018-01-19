@@ -1,0 +1,37 @@
+version: '2'
+
+volumes:
+    uploads:
+        driver: local
+  
+services:
+    sqlscript:
+        build:
+            context: /
+            dockerfile: Dockerfile
+    php:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        links:
+            - mysql
+        ports:
+            - "80:80"
+        environment:
+            - PHP_TIMEZONE=UTC
+            - MYSQL_USERNAME=geopagos
+            - MYSQL_PASSWORD=malditoguindo
+            - MYSQL_DB_NAME=geopagos
+            - MYSQL_HOST_NAME=localhost
+
+    mysql:
+        image: mariadb:10.1.21
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=geopagos
+            - MYSQL_USER=geopagos
+            - MYSQL_PASSWORD=malditoguindo
+        ports:
+            - "3306:3306"
+        volumes_from:
+            - sqlscript
